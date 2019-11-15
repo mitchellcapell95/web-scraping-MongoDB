@@ -14,7 +14,7 @@ def init_browser():
     executable_path = {'executable_path': '/Users/Mitchell Capell/Desktop/web-scraping-challenge/Mission_to_Mars/chromedriver.exe'}
     return Browser('chrome', **executable_path, headless=False)
 
-def scrape_info():
+def scrape():
     browser = init_browser()
 
     mars_data = {}

@@ -23,11 +23,9 @@
                     <h1>Latest Mars News</h1>
                 </div>
         </div>  
-
-                {% for data in mars %} 
                 <div class="container-fluid">
-                    <h2>{{data.latest_title}}</h2>
-                    <p>{{data.latest_p}}</p>
+                    <h2>{{mars_data["latest_title"]}}</h2>
+                    <p>{{mars_data["latest_p"]}}</p>
                 </div>
 
                 <div class="container-fluid">
@@ -35,20 +33,20 @@
                         <div class="col-md-7">
                             <h3>Featured Image</h3>
                             
-                            <img src="{{data.featured_image_url}}" alt="featured_image_url" style="width: 80%;">
+                            <img src="{{mars_data['featured_image_url']}}" alt="featured image" style="width: 80%;">
 
                         </div>
                         <div class="col-md-5">
                             <ul>
                                 <h3>Current Mars Weather</h3>
-                                {{data.mars_weather}}
+                                {{mars_data['mars_weather']}}
                             </ul>
                                 
                                 
                             <ul>
                                 <h3>Mars Facts</h3>
-                                {{data.mars_facts|safe}}
-                                <a href="{{data.mars_facts}}"></a>
+                                {{mars_data['mars_facts']|safe}}
+                                <a href="{{mars_data['mars_facts']}}"></a>
                             </ul>
                         </div>
                     </div>                 
@@ -60,51 +58,39 @@
                     <div class="row">
                         <div class="col-md-6">
                             
-                            
-                            <img src="{{data.cerb_jpg}}" alt="cerb_jpg" style="width:50%;">
+                            <img src="{{mars_data['hemisphere_image_urls'][0]['img_url']}}" alt="hemisphere" style="width:50%;">
                             <div class="caption"style="font-weight: bold;">
-                                {{data.cerb_title}}
-                            </div>                                           
+                                {{mars_data['hemisphere_image_urls'][0]['title']}}
+                            </div> 
+                            
+                        <div class="col-md-6">
+                            
+                            <img src="{{mars_data['hemisphere_image_urls'][1]['img_url']}}" alt="hemisphere" style="width:50%;">
+                            <div class="caption"style="font-weight: bold;">
+                                {{mars_data['hemisphere_image_urls'][1]['title']}}
+                            </div> 
                           
-                        </div>
                         <div class="col-md-6">
-                         
                             
-                            <img src="{{data.schi_jpg}}" alt="schi_jpg" style="width:50%;">
-                            <div class="caption" style="font-weight: bold;">
-                                {{data.schi_title}}
+                            <img src="{{mars_data['hemisphere_image_urls'][2]['img_url']}}" alt="hemisphere" style="width:50%;">
+                            <div class="caption"style="font-weight: bold;">
+                                {{mars_data['hemisphere_image_urls'][2]['title']}}
+                            </div> 
+
+
+                        <div class="col-md-6">
+                            
+                            <img src="{{mars_data['hemisphere_image_urls'][3]['img_url']}}" alt="hemisphere" style="width:50%;">
+                            <div class="caption"style="font-weight: bold;">
+                                {{mars_data['hemisphere_image_urls'][3]['title']}}
                             </div>                                           
-                            
-                         </div>
-                        <div class="col-md-6">
-                         
-                            
-                            <img src="{{data.syr_jpg}}" alt="syr_jpg" style="width:50%;">
-                            <div class="caption" style="font-weight: bold;">
-                                {{data.syr_title}}
-                            </div>     
-
-                          </div>
-                        <div class="col-md-6">
-                         
-                            
-                            <img src="{{data.vall_jpg}}" alt="vall_jpg" style="width:50%;">
-                            <div class="caption" style="font-weight: bold;">
-                                {{data.vall_title}}
-                            </div>       
-                            
-                            
-                            
-
-
+                           
                         </div>
                     </div>
                     </div>
 
                 </div>
-                
-                
-                {% endfor %}              
+                              
                              
             </div>
             
