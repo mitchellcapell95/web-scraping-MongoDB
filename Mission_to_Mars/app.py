@@ -1,6 +1,5 @@
 from flask import Flask, render_template, redirect
 from flask_pymongo import PyMongo
-import pymongo
 import scrape_mars
 
 # Create an instance of Flask
@@ -17,6 +16,7 @@ mongo = PyMongo(app)
 def home():
     mars_data = mongo.db.mars_data.find_one()
     return render_template("index.html", mars_data=mars_data)
+    
 
 
 @app.route("/scrape")

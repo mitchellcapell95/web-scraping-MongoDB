@@ -16,7 +16,7 @@
                     <h1 align="center">Mission to Mars</h1>
                     
                     <p align="Center">
-                        <a class="btn btn-primary btn-lg" href="#" role="button">Scrape New Data</a>
+                        <a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a>
                     </p>
                 </div>
                 <div class="page-header">
@@ -28,8 +28,8 @@
                     <p>{{mars_data["latest_p"]}}</p>
                 </div>
 
-                <div class="container-fluid">
-                    <div class="row">
+                <div class="container-fluid"> <!--Begin main container-->
+                    <div class="row"><!--Main row-->
                         <div class="col-md-7">
                             <h3>Featured Image</h3>
                             
@@ -61,21 +61,24 @@
                             <img src="{{mars_data['hemisphere_image_urls'][0]['img_url']}}" alt="hemisphere" style="width:50%;">
                             <div class="caption"style="font-weight: bold;">
                                 {{mars_data['hemisphere_image_urls'][0]['title']}}
-                            </div> 
+                            </div>
+                        </div>
                             
                         <div class="col-md-6">
                             
                             <img src="{{mars_data['hemisphere_image_urls'][1]['img_url']}}" alt="hemisphere" style="width:50%;">
                             <div class="caption"style="font-weight: bold;">
                                 {{mars_data['hemisphere_image_urls'][1]['title']}}
-                            </div> 
+                            </div>
+                        </div> 
                           
                         <div class="col-md-6">
                             
                             <img src="{{mars_data['hemisphere_image_urls'][2]['img_url']}}" alt="hemisphere" style="width:50%;">
                             <div class="caption"style="font-weight: bold;">
                                 {{mars_data['hemisphere_image_urls'][2]['title']}}
-                            </div> 
+                            </div>
+                        </div> 
 
 
                         <div class="col-md-6">
@@ -87,14 +90,12 @@
                            
                         </div>
                     </div>
-                    </div>
+        
 
                 </div>
                               
                              
             </div>
-            
-        </div>
-    
+        
 </body>
 </html>
